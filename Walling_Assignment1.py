@@ -1,7 +1,6 @@
 from BinaryTree import BinaryTree
 from BinaryTree import Node
 from Graph import Graph
-from MyQueue import MyQueue
 from Stack import Stack
 from Queue import Queue
 
@@ -11,11 +10,14 @@ def QueueTest(q):
 	print "---------------------------------------"
 	for i in range (11):
 		q.put(i)
+	q.put("A")
 	print("0-10 in Queue")
 	print("Size %d" % q.size())
 	print("Dequeuing")
 	for j in range(11):
-		print("dequeuing: %s = " % j), q.get() == j 
+		print("dequeuing: %s" % q.get()) 
+	print("Queue empty")
+	print("Size of Queue: %d " % q.size())
 
 def stackTest(stack):
 	print "---------------------------------------"
