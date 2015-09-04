@@ -1,5 +1,5 @@
 class Node():
-	def __init__(self, val, left, right, parent):
+	def __inint__(self, val, left, right, parent):
 		self.val = val
 		self.right = right
 		self.left = left
@@ -11,13 +11,13 @@ class BinaryTree():
 
 	def add(self, val, parentVal):
 		if (self.root == None):
-			self.root = Node(val, None, None, None)
+			self.root = Node(value, None, None, None)
 		else:
 			head = self.getNode(self.root, parentVal)
 
 			if (head.left == None):
 				if (head.right == None):
-					head.left = Node(val, None, None, head)
+					head.left = None(val, None, None, head)
 			else:
 				if(head.right == None):
 					head.right = Node(val, None, None, head)
@@ -27,7 +27,6 @@ class BinaryTree():
 
 	def printTree(self):
 		head = self.root
-		print head.val
 		if (head == None):
 			print "Empty Tree"
 		else:
@@ -36,13 +35,13 @@ class BinaryTree():
 	
 	def printRec(self, head):
 		if (head != None):
-			print head.val
+			print head.value
 			self.printRec(head.left)
 			self.printRec(head.right)
 
-	def delete(self, val):
-		head = self.getNode(self.root, val)
-		if (head.parent.left.val == head.val):
+	def delete(self, value):
+		head = self.getNode(self.root, value)
+		if (head.parent.left.value == head.value):
 			head.parent.left = None
 		else:
 			head.parent.right = None

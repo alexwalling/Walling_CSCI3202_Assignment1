@@ -8,14 +8,14 @@ class Graph():
 		else:
 			self.graph[val] = []	
 
-	def addEdge(self,val1, val2):
+	def addEdge(val1, val2):
 		if val1 not in self.graph or val2 not in self.graph:
 			print "one or both values not in graph"
 		else:
 			self.graph[val1].append(val2)
 			self.graph[val2].append(val1)
 
-	def findVertex(self,val):
+	def findVertex(val)
 		vertex = self.graph[val]
 		if (vertex == None):
 			print "Vertex not found"
