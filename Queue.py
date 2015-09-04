@@ -7,6 +7,7 @@ class Queue:
 
     def put(self, item):
         if(type(item) != int):
+		print
 	else:
 		self.items.insert(0,item)
 
